@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Suporte Técnico em TI em São Paulo | Lori-TI</title>
+  <meta
+    name="description"
+    content="Suporte técnico em TI em São Paulo. Redes, cabeamento e câmeras CFTV. Atendimento rápido via WhatsApp para empresas e residências."
+  />
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17689004540"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17689004540');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --bg-2:#121a30;
+      --card:rgba(255,255,255,.06);
+      --card-border:rgba(255,255,255,.1);
+      --text:#f4f7fb;
+      --muted:#b6c0d4;
+      --primary:#ff6a00;
+      --primary-2:#ff8c3a;
+      --success:#25D366;
+      --shadow:0 20px 50px rgba(0,0,0,.28);
+      --radius:22px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(255,106,0,.14), transparent 22%),
+        radial-gradient(circle at left center, rgba(37,211,102,.08), transparent 20%),
+        linear-gradient(180deg, #09101d 0%, #0b1020 48%, #0d1427 100%);
+      color:var(--text);
+      line-height:1.6;
+    }
+
+    .container{
+      width:min(1120px, calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .hero{
+      position:relative;
+      overflow:hidden;
+      padding:28px 0 80px;
+    }
+
+    .topbar{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      margin-bottom:42px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:800;
+      letter-spacing:.3px;
+    }
+
+    .brand-badge{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      display:grid;
+      place-items:center;
+      color:#fff;
+      box-shadow:0 10px 30px rgba(255,106,0,.28);
+      font-weight:800;
+    }
+
+    .header-cta{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:46px;
+      padding:0 18px;
+      border-radius:999px;
+      text-decoration:none;
+      color:#fff;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.14);
+      backdrop-filter:blur(10px);
+      transition:.25s ease;
+      font-weight:600;
+    }
+
+    .header-cta:hover{transform:translateY(-1px);background:rgba(255,255,255,.12)}
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:rgba(255,255,255,.07);
+      border:1px solid rgba(255,255,255,.12);
+      color:#dde6f8;
+      font-size:.92rem;
+      margin-bottom:18px;
+    }
+
+    .hero h1{
+      font-size:clamp(2.1rem, 5vw, 4.35rem);
+      line-height:1.04;
+      letter-spacing:-.04em;
+      max-width:12ch;
+      margin-bottom:18px;
+    }
+
+    .hero h1 span{
+      background:linear-gradient(135deg,#fff 0%, #ffd0b0 42%, var(--primary) 100%);
+      -webkit-background-clip:text;
+      background-clip:text;
+      color:transparent;
+    }
+
+    .hero p{
+      color:var(--muted);
+      font-size:1.05rem;
+      max-width:58ch;
+      margin-bottom:28px;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:26px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:54px;
+      padding:0 22px;
+      border-radius:16px;
+      text-decoration:none;
+      font-weight:700;
+      transition:.25s ease;
+      border:1px solid transparent;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg,var(--primary),var(--primary-2));
+      color:#fff;
+      box-shadow:0 16px 35px rgba(255,106,0,.28);
+    }
+
+    .btn-primary:hover{transform:translateY(-2px) scale(1.01)}
+
+    .btn-secondary{
+      background:rgba(255,255,255,.05);
+      color:#fff;
+      border-color:rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+    }
+
+    .btn-secondary:hover{transform:translateY(-2px); background:rgba(255,255,255,.08)}
+
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:12px;
+      margin-top:8px;
+    }
+
+    .point{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:18px;
+      padding:14px;
+      color:#dce5f5;
+      font-size:.95rem;
+    }
+
+    .hero-card{
+      position:relative;
+      background:linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+      padding:22px;
+      backdrop-filter:blur(18px);
+    }
+
+    .hero-card::before{
+      content:"";
+      position:absolute;
+      inset:auto -20% -25% auto;
+      width:220px;
+      height:220px;
+      background:radial-gradient(circle, rgba(255,106,0,.28), transparent 65%);
+      pointer-events:none;
+    }
+
+    .mini-stat{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:16px 18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:20px;
+      margin-bottom:14px;
+    }
+
+    .mini-stat strong{display:block;font-size:1.05rem}
+    .mini-stat span{display:block;color:var(--muted);font-size:.92rem}
+
+    .services-preview{
+      display:grid;
+      gap:14px;
+      margin-top:20px;
+    }
+
+    .service-pill{
+      padding:15px 16px;
+      border-radius:18px;
+      background:rgba(9,16,29,.7);
+      border:1px solid rgba(255,255,255,.08);
+      color:#edf3ff;
+      font-weight:600;
+    }
+
+    .section{
+      padding:34px 0 30px;
+    }
+
+    .section-head{
+      text-align:center;
+      margin-bottom:24px;
+    }
+
+    .section-head h2{
+      font-size:clamp(1.7rem, 3vw, 2.7rem);
+      letter-spacing:-.03em;
+      margin-bottom:8px;
+    }
+
+    .section-head p{
+      color:var(--muted);
+      max-width:720px;
+      margin:0 auto;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3, minmax(0,1fr));
+      gap:18px;
+    }
+
+    .card{
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      border:1px solid var(--card-border);
+      border-radius:24px;
+      padding:24px;
+      box-shadow:var(--shadow);
+      transition:.25s ease;
+    }
+
+    .card:hover{transform:translateY(-5px)}
+
+    .icon{
+      width:52px;
+      height:52px;
+      display:grid;
+      place-items:center;
+      border-radius:16px;
+      background:linear-gradient(135deg, rgba(255,106,0,.22), rgba(255,140,58,.12));
+      border:1px solid rgba(255,255,255,.08);
+      font-size:1.35rem;
+      margin-bottom:16px;
+    }
+
+    .card h3{
+      margin-bottom:8px;
+      font-size:1.15rem;
+    }
+
+    .card p{
+      color:var(--muted);
+      font-size:.98rem;
+    }
+
+    .reasons{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+      align-items:stretch;
+    }
+
+    .reasons-panel,
+    .reasons-list{
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      border:1px solid rgba(255,255,255,.1);
+      border-radius:28px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .badge-grid{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0,1fr));
+      gap:14px;
+      margin-top:18px;
+    }
+
+    .badge{
+      padding:16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .badge strong{
+      display:block;
+      font-size:1.1rem;
+      margin-bottom:4px;
+    }
+
+    .badge span{
+      color:var(--muted);
+      font-size:.92rem;
+    }
+
+    .check-list{
+      list-style:none;
+      display:grid;
+      gap:14px;
+    }
+
+    .check-list li{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      padding:14px 16px;
+      border-radius:18px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      color:#e8eef9;
+    }
+
+    .check{
+      width:26px;
+      height:26px;
+      flex:0 0 26px;
+      display:grid;
+      place-items:center;
+      border-radius:50%;
+      background:rgba(37,211,102,.15);
+      color:#7ff0ab;
+      font-weight:800;
+      margin-top:1px;
+    }
+
+    .cta{
+      padding:26px 0 86px;
+    }
+
+    .cta-box{
+      position:relative;
+      overflow:hidden;
+      background:linear-gradient(135deg, #ff6a00 0%, #ff8c3a 58%, #ffb16f 100%);
+      color:#fff;
+      border-radius:30px;
+      padding:36px 24px;
+      box-shadow:0 24px 60px rgba(255,106,0,.32);
+      text-align:center;
+    }
+
+    .cta-box::after{
+      content:"";
+      position:absolute;
+      inset:-40px auto auto -40px;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      background:rgba(255,255,255,.12);
+    }
+
+    .cta-box h2{
+      position:relative;
+      font-size:clamp(1.8rem, 3vw, 2.8rem);
+      line-height:1.08;
+      margin-bottom:10px;
+    }
+
+    .cta-box p{
+      position:relative;
+      max-width:680px;
+      margin:0 auto 22px;
+      color:rgba(255,255,255,.92);
+    }
+
+    .cta-box .btn{
+      position:relative;
+      background:#fff;
+      color:#cb4c00;
+      box-shadow:0 16px 35px rgba(0,0,0,.18);
+    }
+
+    .cta-box .btn:hover{transform:translateY(-2px) scale(1.01)}
+
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:62px;
+      height:62px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg, #1ec85c, var(--success));
+      color:#fff;
+      text-decoration:none;
+      font-size:1.55rem;
+      box-shadow:0 16px 30px rgba(37,211,102,.35);
+      z-index:999;
+      transition:.25s ease;
+    }
+
+    .whatsapp-float:hover{transform:translateY(-3px) scale(1.04)}
+
+    @media (max-width: 920px){
+      .hero-grid,
+      .cards,
+      .reasons{
+        grid-template-columns:1fr;
+      }
+
+      .hero{
+        padding-top:18px;
+      }
+
+      .hero-points{
+        grid-template-columns:1fr;
+      }
+
+      .topbar{
+        margin-bottom:28px;
+      }
+
+      .header-cta{
+        display:none;
+      }
+
+      .hero h1{
+        max-width:100%;
+      }
+    }
+
+    @media (max-width: 640px){
+      .container{
+        width:min(100% - 22px, 1120px);
+      }
+
+      .hero{
+        padding-bottom:56px;
+      }
+
+      .brand{
+        font-size:.98rem;
+      }
+
+      .brand-badge{
+        width:38px;
+        height:38px;
+        border-radius:12px;
+      }
+
+      .eyebrow{
+        font-size:.82rem;
+        padding:7px 12px;
+      }
+
+      .hero p{
+        font-size:.98rem;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .btn{
+        width:100%;
+      }
+
+      .card,
+      .reasons-panel,
+      .reasons-list,
+      .hero-card,
+      .cta-box{
+        border-radius:22px;
+      }
+
+      .badge-grid{
+        grid-template-columns:1fr;
+      }
+
+      .whatsapp-float{
+        right:14px;
+        bottom:14px;
+        width:58px;
+        height:58px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <div class="topbar">
+        <a href="#" class="brand">
+          <span class="brand-badge">LT</span>
+          <span>Lori-TI</span>
+        </a>
+
+        <a href="https://wa.me/5511985258655" class="header-cta">Atendimento via WhatsApp</a>
+      </div>
+
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">⚡ Atendimento rápido em São Paulo</div>
+          <h1>Suporte Técnico em <span>TI, Redes e CFTV</span></h1>
+          <p>
+            Atendimento profissional para empresas e residências em São Paulo.
+            Resolvemos problemas de computador, rede, internet e instalação de câmeras com agilidade.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              href="https://wa.me/5511985258655"
+              class="btn btn-primary"
+              onclick="gtag('event','conversion',{'send_to':'AW-17689004540/abc123'});"
+            >
+              Falar com um técnico agora
+            </a>
+
+            <a href="#problemas" class="btn btn-secondary">Ver soluções</a>
+          </div>
+
+          <div class="hero-points">
+            <div class="point">✅ Atendimento residencial e empresarial</div>
+            <div class="point">✅ Especialista em redes e câmeras</div>
+            <div class="point">✅ Suporte rápido pelo WhatsApp</div>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <div class="mini-stat">
+            <div>
+              <strong>Atendimento ágil</strong>
+              <span>Resposta rápida para novos chamados</span>
+            </div>
+            <div>🚀</div>
+          </div>
+
+          <div class="mini-stat">
+            <div>
+              <strong>Redes e infraestrutura</strong>
+              <span>Configuração, estabilidade e organização</span>
+            </div>
+            <div>🌐</div>
+          </div>
+
+          <div class="mini-stat">
+            <div>
+              <strong>CFTV e monitoramento</strong>
+              <span>Instalação com acesso remoto</span>
+            </div>
+            <div>📹</div>
+          </div>
+
+          <div class="services-preview">
+            <div class="service-pill">Suporte técnico em computadores e notebooks</div>
+            <div class="service-pill">Internet caindo, lentidão e falhas de rede</div>
+            <div class="service-pill">Instalação e manutenção de câmeras</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="section" id="problemas">
+    <div class="container">
+      <div class="section-head">
+        <h2>Problemas que resolvemos</h2>
+             </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="icon">💻</div>
+          <h3>Computador lento</h3>
+          <p>Otimização, limpeza, ajustes e correções para melhorar o desempenho do equipamento.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">📶</div>
+          <h3>Internet caindo</h3>
+          <p>Diagnóstico e configuração de rede para reduzir falhas, lentidão e quedas constantes.</p>
+        </article>
+
+        <article class="card">
+          <div class="icon">📷</div>
+          <h3>Câmeras de segurança</h3>
+          <p>Instalação e manutenção de CFTV com acesso remoto e suporte para residências e empresas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Por que escolher a Lori-TI?</h2>
+        
+      </div>
+
+      <div class="reasons">
+        <div class="reasons-panel">
+         
+          <div class="badge-grid">
+            <div class="badge">
+              <strong>São Paulo</strong>
+              <span>Foco em atendimento local</span>
+            </div>
+            <div class="badge">
+              <strong>WhatsApp</strong>
+              <span>Contato rápido e direto</span>
+            </div>
+            <div class="badge">
+              <strong>Empresas</strong>
+              <span>Suporte técnico profissional</span>
+            </div>
+            <div class="badge">
+              <strong>Residências</strong>
+              <span>Soluções práticas no dia a dia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="reasons-list">
+          <ul class="check-list">
+            <li><span class="check">✓</span><span>Atendimento rápido em São Paulo e região</span></li>
+            <li><span class="check">✓</span><span>Especialista em redes, cabeamento e CFTV</span></li>
+            <li><span class="check">✓</span><span>Suporte residencial e empresarial</span></li>
+            <li><span class="check">✓</span><span>Layout pensado para gerar mais cliques no WhatsApp</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Precisa de ajuda agora?</h2>
+        <p>
+          Fale com a Lori-TI pelo WhatsApp e receba atendimento rápido para suporte técnico,
+          redes, infraestrutura e câmeras em São Paulo.
+        </p>
+        <a
+          href="https://wa.me/5511985258655"
+          class="btn"
+          onclick="gtag('event','conversion',{'send_to':'AW-17689004540/abc123'});"
+        >
+          Chamar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <a
+    href="https://wa.me/5511985258655"
+    class="whatsapp-float"
+    aria-label="Falar no WhatsApp"
+    onclick="gtag('event','conversion',{'send_to':'AW-17689004540/abc123'});"
+  >
+    💬
+  </a>
+</body>
+</html>
